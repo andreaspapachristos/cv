@@ -56,7 +56,7 @@ public class email {
 		getMailSession = Session.getDefaultInstance(mailServerProperties, null);
 		generateMailMessage = new MimeMessage(getMailSession);
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(host));
-		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("atshxrhs@gmail.com"));
+		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("*****));
 		generateMailMessage.setSubject("thank you for sumbmiting");
 		//String emailBody = "This is a confirmation email. " + "<br><br> Regards, <br>He121s Admin";
 		generateMailMessage.setContent(txt, "text/html");
@@ -68,7 +68,7 @@ public class email {
  
 		// Enter your correct gmail UserID and Password
 		// if you have 2FA enabled then provide App Specific Password
-		transport.connect("smtp.gmail.com", "papachristos.andreas", "m@ria1406");
+		transport.connect("smtp.gmail.com", "******", "*****");
 		transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
 		transport.close();
                // close();
